@@ -5,12 +5,16 @@ import './Counter.css';
 // hooks -> useEffect, useState, useRef, useMemo, useCallback, usecontext
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0); // string, obj, array, boolean, number
+  // age, setAge
+  // name, setName
 
   const increment = () => setCount(count + 1);
   const decrement = () => setCount(count - 1);
   const reset = () => setCount(0);
-
+  
+  // const arr = [ 2, 'Avinash' , (name)=>{console.log(name)} , true ];
+  // arr[2]('Avinash from array');
   return (
     <div className="counter-container">
       <h2>Counter (State Demo)</h2>
@@ -23,5 +27,9 @@ const Counter = () => {
     </div>
   );
 };
+
+// comments -> destructuring, spread operator, rest operator - ES6 features
+// use spread operator to copy objects/arrays -> edit object of object.
+// {name: 'Avinash', details: {age: 26, role: 'developer'}}
 
 export default Counter;

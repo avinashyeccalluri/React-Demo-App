@@ -44,7 +44,7 @@ const TodoList = () => {
         <Button text="Add" onClick={addTodo} variant="primary" />
       </div>
       <ul className="todo-list">
-        {todos.map(todo => (
+        {todos.map((todo) => (
           <li key={todo.id} className={`todo-item ${todo.completed ? 'completed' : ''}`}>
             <input
               type="checkbox"
