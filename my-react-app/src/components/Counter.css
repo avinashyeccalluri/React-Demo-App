@@ -1,0 +1,27 @@
+.counter-container {
+  background-color: #f5f5f5;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.counter-container h2 {
+  color: #333;
+  margin-top: 0;
+}
+
+.counter-display {
+  font-size: 72px;
+  font-weight: bold;
+  color: #667eea;
+  margin: 30px 0;
+}
+
+.counter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
