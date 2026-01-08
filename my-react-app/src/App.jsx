@@ -2,6 +2,9 @@ import UserCard from './components/UserCard';
 import Button from './components/Button';
 import Counter from './components/Counter';
 import TodoList from './components/TodoList';
+import UseEffectDemo from './components/UseEffectDemo';
+import UseRefDemo from './components/UseRefDemo';
+import UseMemoDemo from './components/UseMemoDemo';
 import './App.css';
 
 function App() {
@@ -11,8 +14,8 @@ function App() {
   return (
     <div className="App">
       <header className="app-header">
-        <h1>React Props & State Demo</h1>
-        <p>A demonstration of React fundamentals with clean file structure</p>
+        <h1>React Hooks Learning Hub</h1>
+        <p>Master React fundamentals, hooks, and advanced patterns</p>
       </header>
 
       <main className="app-main">
@@ -70,7 +73,7 @@ function App() {
         </section>
 
         <section className="demo-section">
-          <h2 className="section-title">State Demonstration</h2>
+          <h2 className="section-title">State Demonstration (useState)</h2>
           <p className="section-description">
             Components managing their own internal state
           </p>
@@ -78,10 +81,31 @@ function App() {
           <Counter />
           <TodoList />
         </section>
+
+        <section className="demo-section hooks-section">
+          <h2 className="section-title">Advanced React Hooks</h2>
+          <p className="section-description">
+            Deep dive into useEffect, useRef, and useMemo with real-world examples
+          </p>
+
+          <div className="hooks-container">
+            <div className="hook-demo">
+              <UseEffectDemo />
+            </div>
+
+            <div className="hook-demo">
+              <UseRefDemo />
+            </div>
+
+            <div className="hook-demo">
+              <UseMemoDemo />
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer className="app-footer">
-        <p>Built with React + Vite</p>
+        <p>Built with React + Vite | Learning React Hooks</p>
       </footer>
     </div>
   );
