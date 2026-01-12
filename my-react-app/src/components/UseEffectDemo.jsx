@@ -16,7 +16,6 @@ import './UseEffectDemo.css';
  * 3. [dep1, dep2] -> runs when dependencies change
  * 4. Return cleanup function -> runs before next effect or unmount
  */
-
 const UseEffectDemo = () => {
     const [count, setCount] = useState(0);
     const [user, setUser] = useState(null);
@@ -26,12 +25,12 @@ const UseEffectDemo = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [searchTerm, setSearchTerm] = useState('');
     const [debouncedTerm, setDebouncedTerm] = useState('');
-
     // PATTERN 1: Effect runs on EVERY render
     // ⚠️ Use sparingly - can cause performance issues
     useEffect(() => {
         console.log('🔄 Component rendered! Count:', count);
         // This runs after every render, even on initial mount
+
     });
 
     // PATTERN 2: Effect runs ONCE on mount (empty dependency array)
@@ -71,6 +70,12 @@ const UseEffectDemo = () => {
         }
     };
 
+    useEffect(() => {
+        console.log('check')
+        return ()=>{
+            console.log('clear')
+        }
+    }, []);
     // PATTERN 5: Timer/Interval with cleanup
     // This pattern prevents memory leaks by clearing interval on unmount or when timer stops
     useEffect(() => {
@@ -179,6 +184,7 @@ const UseEffectDemo = () => {
                     variant="primary"
                     disabled={loading}
                 />
+                {/*condition rendering*/}
                 {user && (
                     <div className="user-data">
                         <h4>{user.name}</h4>

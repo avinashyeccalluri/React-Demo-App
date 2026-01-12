@@ -5,6 +5,9 @@ import TodoList from './components/TodoList';
 import UseEffectDemo from './components/UseEffectDemo';
 import UseRefDemo from './components/UseRefDemo';
 import UseMemoDemo from './components/UseMemoDemo';
+import UseContextDemo from './components/UseContextDemo';
+import UseReducerDemo from './components/UseReducerDemo';
+import UseCallbackDemo from './components/UseCallbackDemo';
 import './App.css';
 
 function App() {
@@ -99,6 +102,27 @@ function App() {
 
             <div className="hook-demo">
               <UseMemoDemo />
+            </div>
+          </div>
+        </section>
+
+        <section className="demo-section hooks-section">
+          <h2 className="section-title">Interview Prep Hooks</h2>
+          <p className="section-description">
+            Master useContext, useReducer, and useCallback for frontend interviews
+          </p>
+
+          <div className="hooks-container">
+            <div className="hook-demo">
+              <UseContextDemo />
+            </div>
+
+            <div className="hook-demo">
+              <UseReducerDemo />
+            </div>
+
+            <div className="hook-demo">
+              <UseCallbackDemo />
             </div>
           </div>
         </section>
